@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+
+<body style="background-image: url(image.jpg);
+background-size: cover;">
+
+
+<!--creating title-->
+    <div class="starter-template 
+                text-light 
+                p-5 m-5 display-3 animated rotateIn delay-1s" 
+       style="background-color: purple;
+       text-align: center;
+       font-weight: bolder;
+       font-family: sans-serif;
+       border-radius: 20px;
+       opacity:0.8;">
+        <p class="animated bounceInDown delay-2s">DIGITAL WATCH</p>
+    </div>
+<!--title ends here-->
+     
+     <br>
+<!--digital watch starts here-->
+     <center><div class="p-5 animated zoomIn delay-3s" 
+          style="background-color: blue;
+          margin-left:20%;
+          margin-right:20%;
+          border-radius:50px;
+          color:white;
+          font-weight: bolder;
+          font-size: 30px;
+          opacity:0.9;">
+        
+        <span id="hour" class="p-3 m-5 animated bounceInLeft delay-4s"
+        style="display: inline-block;
+        width: max-content;
+        min-width:80px !important; 
+        max-width: 20px !important; 
+        width:20px !important;
+        background-color: yellow;
+        border-radius:20px; 
+        font-weight: bolder;
+        font-size: 30px; 
+        color:darkslategrey;
+        text-align: center;"></span><span class="animated bounceInLeft delay-5s">:</span>
+        
+        <span id="min" class="p-3 m-5 animated bounceInUp delay-4s" 
+        style="display: inline-block;
+        width: max-content;
+        min-width:80px !important; 
+        max-width: 20px !important; 
+        width:20px !important;
+        background-color: yellow;
+        border-radius:20px; 
+        font-weight: bolder;
+        font-size: 30px; 
+        color:darkslategrey;
+        text-align: center;"></span><span class="animated bounceInLeft delay-5s"> : </span>
+        
+        <span id="sec" class="p-3 m-5 animated bounceInRight delay-4s" 
+        style="display: inline-block;
+        width: max-content;
+        min-width:80px !important; 
+        max-width: 20px !important; 
+        width:20px !important;
+        background-color: yellow;
+        border-radius:20px; 
+        font-weight: bolder;
+        font-size: 30px; 
+        color:darkslategrey;
+        text-align: center;"></span>      
+     
+     </div>
+     </center>
+<!--digital watch ends here-->
+    
+    
+<!--java script code-->
+    <script>
+    function digital(){
+    var d=new Date();
+    var a=d.getHours();
+    var b=d.getMinutes();
+    var c=d.getSeconds();
+    var x=document.getElementById("hour");
+    x.textContent=a;
+    var y=document.getElementById("min");
+    y.textContent=b;
+    var z=document.getElementById("sec");
+    z.textContent=c;
+    }
+    setInterval(digital,1000);
+       
+    </script>
+<!--java script code ends here-->
+   
+</body>
+</html>
